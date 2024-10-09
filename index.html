@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Accident Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center">Traffic Accident Prediction</h1>
+
+    <form id="predictionForm" class="mt-4">
+        <div class="mb-3">
+            <label for="weather" class="form-label">Weather Condition</label>
+            <select class="form-select" id="weather" name="weather" required>
+                <option value="clear">Clear</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+                <option value="foggy">Foggy</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="time" class="form-label">Time of Day</label>
+            <select class="form-select" id="time" name="time" required>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+                <option value="night">Night</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="road_condition" class="form-label">Road Condition</label>
+            <select class="form-select" id="road_condition" name="road_condition" required>
+                <option value="dry">Dry</option>
+                <option value="wet">Wet</option>
+                <option value="icy">Icy</option>
+                <option value="snow">Snow</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="traffic_density" class="form-label">Traffic Density (1-100)</label>
+            <input type="number" class="form-control" id="traffic_density" name="traffic_density" min="1" max="100" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Predict Accident Risk</button>
+    </form>
+
+    <div id="result" class="alert alert-info mt-4" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
